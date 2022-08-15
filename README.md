@@ -38,6 +38,20 @@ Simply pull them from docker hub.
 - [sainnhe/redis](https://hub.docker.com/r/sainnhe/redis/tags)
 - [sainnhe/node](https://hub.docker.com/r/sainnhe/node/tags)
 
+## Is this ready for production?
+
+Nope.
+
+Currently this is more like an idea instead of a project for production. The idea behind it can be widely used in other images, so we can make more small images instead of just these two.
+
+If people like this idea and would like to contribute, then it will turn into a real project for production and will get long-term support, but if no one like this idea then it will turn into my personal project and get very limited support. Personally I will continue to use them, bugs will be handled and the images will be rebuilt to receive the latest updates every week, and I may add some new images for my personal use, however I can't guarantee long-term support in the future.
+
+But for now, I think it's usable enough for your personal projects.
+
+The binary itself comes from the official repo of alpine 3.16 so it should be stable enough. And the entry point files are based on those from the official docker images.
+
+So far, I use them to run some CI and deploy some services on my raspberry pi 4, everything works fine.
+
 ## License
 
 [MIT](./LICENSE) © sainnhe

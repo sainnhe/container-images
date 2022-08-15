@@ -35,9 +35,8 @@ This project directly uses the packages in the official Alpine Linux repository 
 
 Simply pull them from docker hub.
 
-```shell
-$ sudo docker pull sainnhe/node:16
-```
+- [sainnhe/redis](https://hub.docker.com/r/sainnhe/redis/tags)
+- [sainnhe/node](https://hub.docker.com/r/sainnhe/node/tags)
 
 ## License
 

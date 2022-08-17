@@ -24,6 +24,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
@@ -34,3 +40,6 @@ jobs:
             sainnhe/node:latest
             sainnhe/node:18
             sainnhe/node:current
+            ghcr.io/sainnhe/node:latest
+            ghcr.io/sainnhe/node:18
+            ghcr.io/sainnhe/node:current

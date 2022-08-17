@@ -33,10 +33,12 @@ This project directly uses the packages in the official Alpine Linux repository 
 
 ## Good. How can I try them?
 
-Simply pull them from docker hub.
+Simply pull them from docker hub or github container registry:
 
-- [sainnhe/redis](https://hub.docker.com/r/sainnhe/redis/tags)
-- [sainnhe/node](https://hub.docker.com/r/sainnhe/node/tags)
+- [docker.io/sainnhe/redis](https://hub.docker.com/r/sainnhe/redis/tags)
+- [docker.io/sainnhe/node](https://hub.docker.com/r/sainnhe/node/tags)
+- [ghcr.io/sainnhe/redis](https://github.com/sainnhe/minimal-container-images/pkgs/container/redis)
+- [ghcr.io/sainnhe/node](https://github.com/sainnhe/minimal-container-images/pkgs/container/node)
 
 ## Is this ready for production?
 

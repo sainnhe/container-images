@@ -2,7 +2,7 @@
 
 This repository contains my personal builds of some container images, the following images are included:
 
-## Nodejs && Redis
+## node && redis
 
 The size of these two images are very very small, they are even smaller than the official alpine based images:
 
@@ -49,6 +49,26 @@ Supported architectures:
 - `linux/arm64/v8`
 - `linux/ppc64le`
 - `linux/s390x`
+
+## mdbook
+
+Repository:
+
+- [docker.io/sainnhe/mdbook](https://hub.docker.com/r/sainnhe/mdbook/tags)
+- [ghcr.io/sainnhe/mdbook](https://github.com/sainnhe/minimal-container-images/pkgs/container/mdbook)
+
+Available tags:
+
+- `sainnhe/mdbook:latest`
+
+Supported architectures:
+
+- `linux/386`
+- `linux/amd64`
+- `linux/arm/v6`
+- `linux/arm/v7`
+- `linux/arm64/v8`
+- `linux/ppc64le`
 
 ## License
 

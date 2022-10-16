@@ -112,6 +112,27 @@ Supported architectures:
 - `linux/ppc64le`
 - `linux/s390x`
 
+## git
+
+Repository:
+
+- [docker.io/sainnhe/git](https://hub.docker.com/r/sainnhe/git/tags)
+- [ghcr.io/sainnhe/git](https://github.com/sainnhe/minimal-container-images/pkgs/container/git)
+
+Available tags:
+
+- `sainnhe/git:latest`
+
+Supported architectures:
+
+- `linux/386`
+- `linux/amd64`
+- `linux/arm/v6`
+- `linux/arm/v7`
+- `linux/arm64/v8`
+- `linux/ppc64le`
+- `linux/s390x`
+
 ## License
 
 [MIT](./LICENSE) © sainnhe

@@ -70,6 +70,27 @@ Supported architectures:
 - `linux/arm64/v8`
 - `linux/ppc64le`
 
+## hugo
+
+Repository:
+
+- [docker.io/sainnhe/hugo](https://hub.docker.com/r/sainnhe/hugo/tags)
+- [ghcr.io/sainnhe/hugo](https://github.com/sainnhe/minimal-container-images/pkgs/container/hugo)
+
+Available tags:
+
+- `sainnhe/hugo:latest`
+
+Supported architectures:
+
+- `linux/386`
+- `linux/amd64`
+- `linux/arm/v6`
+- `linux/arm/v7`
+- `linux/arm64/v8`
+- `linux/ppc64le`
+- `linux/s390x`
+
 ## License
 
 [MIT](./LICENSE) © sainnhe

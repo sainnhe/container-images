@@ -2,8 +2,7 @@ FROM alpine:latest
 
 RUN addgroup -S -g 1000 redis \
     && adduser -S -G redis -u 999 redis \
-    && apk add redis su-exec tzdata \
-    && rm -rf /var/cache/apk
+    && apk add --no-cache redis su-exec tzdata
 
 RUN mkdir /data && chown redis:redis /data
 VOLUME /data

@@ -1,10 +1,8 @@
 # Introduction
 
-This repository contains my personal builds of some container images, the following images are included:
+This repository contains my personal builds of some container images. These images are built with small in mind, thus are very suitable for CI.
 
-## node && redis
-
-The size of these two images are very very small, they are even smaller than the official alpine based images:
+Here is a quick comparison of my builds of node and redis to the official images:
 
 ```shell
 $ sudo docker images --format "{{.Repository}}:{{.Tag}}    {{.Size}}" | grep node
@@ -27,111 +25,21 @@ $ docker --version
 Docker version 20.10.17, build 100c701
 ```
 
-They are available in the following repositories:
+As you can see, they are much smaller than the official debian based images, and are even smaller than the official alpine based images!
 
-- [docker.io/sainnhe/redis](https://hub.docker.com/r/sainnhe/redis/tags)
-- [docker.io/sainnhe/node](https://hub.docker.com/r/sainnhe/node/tags)
-- [ghcr.io/sainnhe/redis](https://github.com/sainnhe/minimal-container-images/pkgs/container/redis)
-- [ghcr.io/sainnhe/node](https://github.com/sainnhe/minimal-container-images/pkgs/container/node)
+## List of images
 
-Available tags:
+These images will be built on schedule and are published in both [`docker.io`](https://hub.docker.com/r/sainnhe) and [`ghcr.io`](https://github.com/sainnhe?tab=packages&repo_name=container-images). All of them support multiple architectures.
+
+Available images:
 
 - `sainnhe/node:16`, `sainnhe/node:lts`
 - `sainnhe/node:18`, `sainnhe/node:current`, `sainnhe/node:latest`
 - `sainnhe/redis:7`, `sainnhe/redis:latest`
-
-Supported architectures:
-
-- `linux/386`
-- `linux/amd64`
-- `linux/arm/v6`
-- `linux/arm/v7`
-- `linux/arm64/v8`
-- `linux/ppc64le`
-- `linux/s390x`
-
-## mdbook
-
-Repository:
-
-- [docker.io/sainnhe/mdbook](https://hub.docker.com/r/sainnhe/mdbook/tags)
-- [ghcr.io/sainnhe/mdbook](https://github.com/sainnhe/minimal-container-images/pkgs/container/mdbook)
-
-Available tags:
-
 - `sainnhe/mdbook:latest`
-
-Supported architectures:
-
-- `linux/386`
-- `linux/amd64`
-- `linux/arm/v6`
-- `linux/arm/v7`
-- `linux/arm64/v8`
-- `linux/ppc64le`
-
-## hugo
-
-Repository:
-
-- [docker.io/sainnhe/hugo](https://hub.docker.com/r/sainnhe/hugo/tags)
-- [ghcr.io/sainnhe/hugo](https://github.com/sainnhe/minimal-container-images/pkgs/container/hugo)
-
-Available tags:
-
 - `sainnhe/hugo:latest`
-
-Supported architectures:
-
-- `linux/386`
-- `linux/amd64`
-- `linux/arm/v6`
-- `linux/arm/v7`
-- `linux/arm64/v8`
-- `linux/ppc64le`
-- `linux/s390x`
-
-## vercel
-
-Repository:
-
-- [docker.io/sainnhe/vercel](https://hub.docker.com/r/sainnhe/vercel/tags)
-- [ghcr.io/sainnhe/vercel](https://github.com/sainnhe/minimal-container-images/pkgs/container/vercel)
-
-Available tags:
-
 - `sainnhe/vercel:latest`
-
-Supported architectures:
-
-- `linux/386`
-- `linux/amd64`
-- `linux/arm/v6`
-- `linux/arm/v7`
-- `linux/arm64/v8`
-- `linux/ppc64le`
-- `linux/s390x`
-
-## git
-
-Repository:
-
-- [docker.io/sainnhe/git](https://hub.docker.com/r/sainnhe/git/tags)
-- [ghcr.io/sainnhe/git](https://github.com/sainnhe/minimal-container-images/pkgs/container/git)
-
-Available tags:
-
 - `sainnhe/git:latest`
-
-Supported architectures:
-
-- `linux/386`
-- `linux/amd64`
-- `linux/arm/v6`
-- `linux/arm/v7`
-- `linux/arm64/v8`
-- `linux/ppc64le`
-- `linux/s390x`
 
 ## License
 

@@ -29,9 +29,13 @@ As you can see, they are much smaller than the official debian based images, and
 
 ## List of images
 
-These images will be built on schedule and are published in both [`docker.io`](https://hub.docker.com/r/sainnhe) and [`ghcr.io`](https://github.com/sainnhe?tab=packages&repo_name=container-images). All of them support multiple architectures.
+These images support multiple architectures and will be built on schedule, you can pull them from the following registries:
 
-Available images:
+- [`docker.io`](https://hub.docker.com/r/sainnhe)
+- [`ghcr.io`](https://github.com/sainnhe?tab=packages&repo_name=container-images)
+- [`git.sainnhe.dev`](https://git.sainnhe.dev/sainnhe/-/packages?q=&type=container)
+
+Available tags:
 
 - `sainnhe/node:16`, `sainnhe/node:lts`
 - `sainnhe/node:18`, `sainnhe/node:current`, `sainnhe/node:latest`

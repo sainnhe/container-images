@@ -43,9 +43,6 @@ jobs:
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           push: true
           tags: |
-            docker.io/sainnhe/node:16
             docker.io/sainnhe/node:lts
-            ghcr.io/sainnhe/node:16
             ghcr.io/sainnhe/node:lts
-            git.sainnhe.dev/sainnhe/node:16
             git.sainnhe.dev/sainnhe/node:lts

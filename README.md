@@ -44,9 +44,9 @@ Available tags:
 - `sainnhe/git:latest`
 - `sainnhe/hugo:latest`
 - `sainnhe/mdbook:latest`
-- `sainnhe/node:16`, `sainnhe/node:lts`
-- `sainnhe/node:18`, `sainnhe/node:current`, `sainnhe/node:latest`
-- `sainnhe/redis:7`, `sainnhe/redis:latest`
+- `sainnhe/node:current`, `sainnhe/node:latest`
+- `sainnhe/node:lts`
+- `sainnhe/redis:latest`
 - `sainnhe/vercel:latest`
 
 ## License

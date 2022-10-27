@@ -44,11 +44,8 @@ jobs:
           push: true
           tags: |
             docker.io/sainnhe/node:latest
-            docker.io/sainnhe/node:18
             docker.io/sainnhe/node:current
             ghcr.io/sainnhe/node:latest
-            ghcr.io/sainnhe/node:18
             ghcr.io/sainnhe/node:current
             git.sainnhe.dev/sainnhe/node:latest
-            git.sainnhe.dev/sainnhe/node:18
             git.sainnhe.dev/sainnhe/node:current

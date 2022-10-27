@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker.io/library/alpine:latest
 
 RUN addgroup -S -g 1000 redis \
     && adduser -S -G redis -u 999 redis \

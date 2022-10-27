@@ -5,6 +5,7 @@ RUN apk add --no-cache \
     automake \
     bash \
     bison \
+    curl \
     file \
     flex \
     gettext \

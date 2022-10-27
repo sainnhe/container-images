@@ -37,6 +37,7 @@ These images support multiple architectures and will be built on schedule, you c
 
 Available tags:
 
+- `sainnhe/clang:latest`
 - `sainnhe/gcc:latest`
 - `sainnhe/git:latest`
 - `sainnhe/hugo:latest`

@@ -37,13 +37,14 @@ These images support multiple architectures and will be built on schedule, you c
 
 Available tags:
 
+- `sainnhe/gcc:latest`
+- `sainnhe/git:latest`
+- `sainnhe/hugo:latest`
+- `sainnhe/mdbook:latest`
 - `sainnhe/node:16`, `sainnhe/node:lts`
 - `sainnhe/node:18`, `sainnhe/node:current`, `sainnhe/node:latest`
 - `sainnhe/redis:7`, `sainnhe/redis:latest`
-- `sainnhe/mdbook:latest`
-- `sainnhe/hugo:latest`
 - `sainnhe/vercel:latest`
-- `sainnhe/git:latest`
 
 ## License
 

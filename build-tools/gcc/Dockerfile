@@ -1,0 +1,20 @@
+FROM docker.io/sainnhe/gcc:latest
+
+RUN apk add --no-cache \
+    autoconf \
+    automake \
+    bash \
+    bison \
+    file \
+    flex \
+    gettext \
+    groff \
+    libtool \
+    m4 \
+    make \
+    patch \
+    pkgconf \
+    texinfo \
+    xz
+
+CMD ["bash"]

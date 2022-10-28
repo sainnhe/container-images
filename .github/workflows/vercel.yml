@@ -29,12 +29,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Login to Gitea Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: git.sainnhe.dev
-          username: ${{ secrets.GITEA_USERNAME }}
-          password: ${{ secrets.GITEA_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
@@ -44,4 +38,3 @@ jobs:
           tags: |
             docker.io/sainnhe/vercel:latest
             ghcr.io/sainnhe/vercel:latest
-            git.sainnhe.dev/sainnhe/vercel:latest

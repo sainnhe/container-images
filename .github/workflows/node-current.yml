@@ -30,12 +30,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Login to Gitea Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: git.sainnhe.dev
-          username: ${{ secrets.GITEA_USERNAME }}
-          password: ${{ secrets.GITEA_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
@@ -47,5 +41,3 @@ jobs:
             docker.io/sainnhe/node:current
             ghcr.io/sainnhe/node:latest
             ghcr.io/sainnhe/node:current
-            git.sainnhe.dev/sainnhe/node:latest
-            git.sainnhe.dev/sainnhe/node:current

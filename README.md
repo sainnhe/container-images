@@ -33,7 +33,6 @@ These images support multiple architectures and will be built on schedule, you c
 
 - [`docker.io`](https://hub.docker.com/r/sainnhe)
 - [`ghcr.io`](https://github.com/sainnhe?tab=packages&repo_name=container-images)
-- [`git.sainnhe.dev`](https://git.sainnhe.dev/sainnhe/-/packages?q=&type=container)
 
 Available tags:
 

@@ -39,6 +39,7 @@ Available tags:
 - `sainnhe/build-tools:clang`
 - `sainnhe/build-tools:gcc`, `sainnhe/build-tools:latest`
 - `sainnhe/clang:latest`
+- `sainnhe/cmake:latest`
 - `sainnhe/gcc:latest`
 - `sainnhe/git:latest`
 - `sainnhe/hugo:latest`

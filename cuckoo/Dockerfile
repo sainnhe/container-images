@@ -46,4 +46,9 @@ RUN adduser --disabled-password --gecos "" cuckoo \
 RUN pip install -U pip setuptools \
     && pip install -U cuckoo
 
+RUN cuckoo \
+    && sed -i \
+    's/version_check = yes/version_check = no/' \
+    /root/.cuckoo/conf/cuckoo.conf
+
 CMD ["bash"]

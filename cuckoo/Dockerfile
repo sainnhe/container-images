@@ -1,5 +1,6 @@
 FROM docker.io/library/ubuntu:bionic
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update \
     && apt upgrade -y \
     && apt install -y \

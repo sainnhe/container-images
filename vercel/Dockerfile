@@ -1,4 +1,4 @@
-FROM docker.io/sainnhe/node:latest
+FROM docker.io/sainnhe/node:lts
 
 RUN npm install -g vercel \
     && rm -rf ~/.npm

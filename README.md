@@ -31,8 +31,8 @@ As you can see, they are much smaller than the official debian based images, and
 
 These images support multiple architectures and will be built on schedule, you can pull them from the following registries:
 
-- [`docker.io`](https://hub.docker.com/r/sainnhe)
 - [`ghcr.io`](https://github.com/sainnhe?tab=packages&repo_name=container-images)
+- [`quay.io`](https://quay.io/user/sainnhe)
 
 Available tags:
 

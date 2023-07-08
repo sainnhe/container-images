@@ -1,4 +1,4 @@
-FROM docker.io/sainnhe/clang:latest
+FROM ghcr.io/sainnhe/clang:latest
 
 RUN apk add --no-cache \
     autoconf \

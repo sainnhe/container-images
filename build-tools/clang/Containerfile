@@ -1,4 +1,4 @@
-FROM ghcr.io/sainnhe/clang:latest
+FROM quay.io/sainnhe/clang:latest
 
 RUN apk add --no-cache \
     autoconf \

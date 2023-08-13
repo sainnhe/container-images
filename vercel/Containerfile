@@ -1,4 +1,4 @@
-FROM ghcr.io/sainnhe/node:lts
+FROM quay.io/sainnhe/node:lts
 
 RUN npm install -g vercel \
     && rm -rf ~/.npm

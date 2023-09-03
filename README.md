@@ -36,6 +36,8 @@ These images support multiple architectures and will be built on schedule, you c
 
 Available tags:
 
+- `sainnhe/archlinux:base`, `sainnhe/archlinux:latest`
+- `sainnhe/archlinux:base-devel`
 - `sainnhe/build-tools:clang`
 - `sainnhe/build-tools:gcc`, `sainnhe/build-tools:latest`
 - `sainnhe/clang:latest`

@@ -56,9 +56,8 @@ There is also an Arch Linux base image. Compared to the official base image, it 
 - Keyring has been imported.
 - Three repositories has been enabled: `community`, `multilib` and `archlinuxcn`
 - A user `admin` has been created and can execute `sudo` command without password
-- The default user is `admin` and the default work directory is `/home/admin`
 
-Since Arch Linux is a rolling release distro, you need to run `sudo pacman -Syu --noconfirm` before using.
+Since Arch Linux is a rolling release distro, you need to run `pacman -Syu --noconfirm` before using.
 
 Available tags:
 

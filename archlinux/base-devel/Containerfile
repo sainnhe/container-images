@@ -11,8 +11,4 @@ RUN pacman-key --init && \
     useradd -r -s /usr/bin/bash -m -G wheel -c Administrator admin && \
     echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-USER admin
-
-WORKDIR /home/admin
-
 CMD ["bash"]

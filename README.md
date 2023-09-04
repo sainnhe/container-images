@@ -36,8 +36,6 @@ These images support multiple architectures and will be built on schedule, you c
 
 Available tags:
 
-- `sainnhe/archlinux:base`, `sainnhe/archlinux:latest`
-- `sainnhe/archlinux:base-devel`
 - `sainnhe/build-tools:clang`
 - `sainnhe/build-tools:gcc`, `sainnhe/build-tools:latest`
 - `sainnhe/clang:latest`
@@ -50,6 +48,20 @@ Available tags:
 - `sainnhe/node:lts`
 - `sainnhe/redis:latest`
 - `sainnhe/vercel:latest`
+
+## Arch Linux base image
+
+There is also an Arch Linux base image. Compared to the official base image, it features the following:
+
+- Keyring has been imported.
+- Three repositories has been enabled: `community`, `multilib` and `archlinuxcn`
+- A user `admin` has been created and can execute `sudo` command without password
+- The default user is `admin` and the default work directory is `/home/admin`
+
+Available tags:
+
+- `sainnhe/archlinux:base`, `sainnhe/archlinux:latest`
+- `sainnhe/archlinux:base-devel`
 
 ## License
 

@@ -7,6 +7,12 @@ RUN pacman-key --init && \
     printf "\n[archlinuxcn]\nServer = https://repo.archlinuxcn.org/\$arch\n" >> /etc/pacman.conf && \
     pacman -Syy && \
     pacman -S --noconfirm archlinuxcn-keyring && \
-    rm -rf /var/cache/pacman/pkg
+    rm -rf /var/cache/pacman/pkg && \
+    useradd -r -s /usr/bin/bash -m -G wheel -c Administrator admin && \
+    echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-CMD ["sh"]
+USER admin
+
+WORKDIR /home/admin
+
+CMD ["bash"]

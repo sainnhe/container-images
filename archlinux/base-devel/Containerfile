@@ -6,6 +6,7 @@ RUN pacman-key --init && \
     printf "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist\n" >> /etc/pacman.conf && \
     printf "\n[archlinuxcn]\nServer = https://repo.archlinuxcn.org/\$arch\n" >> /etc/pacman.conf && \
     pacman -Syy && \
+    pacman-key --lsign farseerfc@archlinux.org && \
     pacman -S --noconfirm archlinuxcn-keyring && \
     rm -rf /var/cache/pacman/pkg && \
     useradd -r -s /usr/bin/bash -m -G wheel -c Administrator admin && \

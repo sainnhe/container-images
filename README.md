@@ -48,6 +48,8 @@ Available tags:
 - `sainnhe/node:lts`
 - `sainnhe/redis:latest`
 - `sainnhe/vercel:latest`
+- `sainnhe/archlinux:latest`
+- `sainnhe/osv-scanner:latest`
 
 ## Arch Linux base image
 

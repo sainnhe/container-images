@@ -46,6 +46,8 @@ Available tags:
 - `sainnhe/mdbook:latest`
 - `sainnhe/node:current`, `sainnhe/node:latest`
 - `sainnhe/node:lts`
+- `sainnhe/node-chromium:current`, `sainnhe/node-chromium:latest`
+- `sainnhe/node-chromium:lts`
 - `sainnhe/redis:latest`
 - `sainnhe/vercel:latest`
 - `sainnhe/archlinux:latest`

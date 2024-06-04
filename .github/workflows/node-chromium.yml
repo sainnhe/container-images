@@ -1,0 +1,104 @@
+name: node-chromium
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'node-chromium/current/Containerfile'
+      - 'node-chromium/current/docker-entrypoint.sh'
+      - 'node-chromium/lts/Containerfile'
+      - 'node-chromium/lts/docker-entrypoint.sh'
+  schedule:
+    - cron: "12 0 * * 0"
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prune Untagged Images on ghcr.io
+        uses: Chizkiyahu/delete-untagged-ghcr-action@v2
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository_owner: ${{ github.repository_owner }}
+          repository: ${{ github.repository }}
+          package_name: node-chromium
+          untagged_only: true
+          owner_type: user
+  build-current:
+    runs-on: ubuntu-latest
+    needs: prune
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install QEMU
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qemu-user-static
+      - name: Build Image
+        id: build-image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          oci: true
+          image: node-chromium
+          tags: current latest
+          context: ./node-chromium/current
+          containerfiles: |
+            ./node-chromium/current/Containerfile
+          platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
+      - name: Push To ghcr.io
+        id: push-to-ghcr
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: ghcr.io/sainnhe
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push To quay.io
+        id: push-to-quay
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: quay.io/sainnhe
+          username: sainnhe
+          password: ${{ secrets.QUAY_PASSWORD }}
+  build-lts:
+    runs-on: ubuntu-latest
+    needs: prune
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install QEMU
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qemu-user-static
+      - name: Build Image
+        id: build-image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          oci: true
+          image: node-chromium
+          tags: lts
+          context: ./node-chromium/lts
+          containerfiles: |
+            ./node-chromium/lts/Containerfile
+          platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
+      - name: Push To ghcr.io
+        id: push-to-ghcr
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: ghcr.io/sainnhe
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push To quay.io
+        id: push-to-quay
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: quay.io/sainnhe
+          username: sainnhe
+          password: ${{ secrets.QUAY_PASSWORD }}
